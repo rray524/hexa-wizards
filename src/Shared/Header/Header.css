@@ -1,0 +1,79 @@
+.banner-img img {
+    width: 100%;
+}
+.navbar a.nav-link {
+    color: #2a354e!important;
+    font-weight: 600;
+    font-size: 19px;
+    margin: 12px 25px;
+}
+a.talk.nav-link {
+    background: #E21B1B;
+    color: #ffffff!important;
+    border-radius: 2px;
+    width: 163px;
+    height: 58px;
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.menu {
+    padding: 34px 0;
+}
+h4.slogan {
+    color: #313d58;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    margin-bottom: 23px;
+}
+img.site-logo {
+    width: 95%;
+}
+a.navbar-brand {
+    width: 21%;
+}
+.banner {
+    padding: 141px 0;
+}
+h1.banner-title {
+    color: #2a354e;
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 66px;
+    margin-bottom: 42px;
+    margin-right: 26px;
+    letter-spacing: 1px;
+}
+svg.svg-inline--fa.fa-play-circle.fa-w-16 {
+    color: #E21B1B;
+    font-size: 37px;
+}
+.tube a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner-btn-youtube {
+    display: flex;
+    align-items: center;
+}
+button.banner-btn {
+    background: #E21B1B;
+    color: #ffffff!important;
+    border-radius: 2px;
+    width: 163px;
+    height: 58px;
+    border: none;
+    font-size: 19px;
+    margin-right: 30px;
+    font-weight: 700;
+}
+.tube span {
+    font-size: 22px;
+    font-weight: 600;
+    margin-left: 8px;
+}

@@ -4,7 +4,7 @@ import CommonHeader from '../../../Shared/Header/CommonHeader';
 import LeadForm from '../LeadForm/LeadForm';
 import dashboard from '../../../images/Dashboard.png'
 import { useParams } from 'react-router';
-import { Container, Row } from 'react-bootstrap';
+import { Container, Row, Spinner } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
@@ -17,24 +17,28 @@ const SingleMem = () => {
     const phn = <FontAwesomeIcon icon={faPhone} />
     const { memID } = useParams();
     const [member, setMember] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
     useEffect(() => {
+        setIsLoading(true);
         const url = `http://localhost:5000/members/${memID}`;
         fetch(url)
             .then(res => res.json())
             .then(data => {
+
                 setMember(data);
+                setIsLoading(false);
             })
     }, [])
     return (
         <div id="single-mem">
             <CommonHeader></CommonHeader>
             <div className="header-breadcrumb" style={{ backgroundImage: `url(${dashboard})`, backgroundSize: 'cover', padding: '200px 0', boxShadow: 'inset 0 0 0 2000px rgba(10,6,83,0.8)' }}>
-                <h2 className='text-center text-white'>{member.name}</h2>
+                <h2 className='text-center text-white'>Archive: {member.name}</h2>
             </div>
             <br /><br />
             <Container>
                 <Row>
-                    <div className="team-wrapper-area">
+                    {!isLoading && <div className="team-wrapper-area">
                         <div className="row align-items-center">
 
                             <div className="col-xl-5 col-lg-5 col-md-6">
@@ -84,7 +88,10 @@ const SingleMem = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>}
+                    {isLoading && <div className="spinner text-center" style={{ position: 'fixed', zIndex: '1', top: '0', left: '0', right: '0', bottom: '0' }}>
+                        <Spinner animation="grow" variant="primary" />
+                    </div>}
                 </Row>
             </Container>
             <br /><br />

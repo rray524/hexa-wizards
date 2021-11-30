@@ -4,6 +4,7 @@ import Home from './Pages/Home/Home';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import { useEffect, useState } from 'react';
 import SingleMem from './Pages/Home/Team/SingleMem';
+import ScrollToTop from './Shared/ScrollToTop';
 
 
 function App() {
@@ -29,20 +30,22 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Switch>
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
-          <Route path="/home">
-            <Home></Home>
-          </Route>
-          <Route path="/dashboard">
-            <Dashboard></Dashboard>
-          </Route>
-          <Route path="/members/:memID">
-            <SingleMem></SingleMem>
-          </Route>
-        </Switch>
+        <ScrollToTop>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route path="/home">
+              <Home></Home>
+            </Route>
+            <Route path="/dashboard">
+              <Dashboard></Dashboard>
+            </Route>
+            <Route path="/members/:memID">
+              <SingleMem></SingleMem>
+            </Route>
+          </Switch>
+        </ScrollToTop>
       </BrowserRouter>
       {showButton && (
         <button onClick={scrollToTop} className="back-to-top">

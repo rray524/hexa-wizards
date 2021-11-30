@@ -32,15 +32,15 @@
 }
 .team-hover li {
     display: inline-block;
-    margin-right: 3px;
+    margin-right: 7px;
 }
 .team-hover li a {
     display: block;
-    line-height: 28px;
-    font-size: 14px;
+    line-height: 36px;
+    font-size: 16px;
     color: #E21B1B;
-    width: 28px;
-    height: 28px;
+    width: 34px;
+    height: 34px;
     border-radius: 4px;
     background: #f1d4d4;
     text-align: center;
@@ -76,7 +76,7 @@ div#team {
 .single-team-content .team-profe {
     text-transform: uppercase;
     color: #E21B1B;
-    font-size: 15px;
+    font-size: 20px;
     margin-bottom: 10px;
     display: block;
 }
@@ -84,6 +84,7 @@ div#team {
     font-size: 37px;
     line-height: 40px;
     font-weight: 700;
+    margin: 23px 0;
 }
 .team-wrapper-area p {
     font-size: 18px;
@@ -101,6 +102,9 @@ div#team {
     color: #647589;
     list-style: none;
     font-size: 21px;
+    padding: 9px 0;
+    display: flex;
+    align-items: center;
 }
 .team-information ul {
     padding: 0;
@@ -113,4 +117,13 @@ div#team {
     margin-bottom: 5px;
     display: block;
     color: #E21B1B;
+}
+svg.svg-inline--fa.fa-envelope.fa-w-16, svg.svg-inline--fa.fa-phone.fa-w-16 {
+    color: #fff;
+    background: #E21B1B;
+    height: 37px;
+    width: 37px;
+    padding: 7px;
+    border-radius: 50%;
+    margin-right: 13px;
 }

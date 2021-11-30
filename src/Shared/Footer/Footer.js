@@ -5,35 +5,14 @@ import logo from '../../images/logo.png';
 import footerBg from '../../images/bg2.jpg';
 import { faFacebookF, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import ReactMapGL, { Source, Layer } from 'react-map-gl';
+
 
 const Footer = () => {
+
     const fb = <FontAwesomeIcon icon={faFacebookF} />
     const tw = <FontAwesomeIcon icon={faTwitter} />
     const lnkdin = <FontAwesomeIcon icon={faLinkedinIn} />
-    const MAPBOX_TOKEN = 'pk.eyJ1IjoibWF5b2ppY2giLCJhIjoiY2pla3Q3MzVvMWRoYTJybnVyMndxM2hmdCJ9.nWZlYcpKaMqz6m7xTsnJGA';
-    const [viewport, setViewport] = useState({
-        latitude: 37.8,
-        longitude: -122.4,
-        zoom: 15,
-        bearing: 0,
-        pitch: 0
-    });
-    const geojson = {
-        type: 'FeatureCollection',
-        features: [
-            { type: 'Feature', geometry: { type: 'Point', coordinates: [-122.4, 37.8] } }
-        ]
-    };
 
-    const layerStyle = {
-        id: 'point',
-        type: 'circle',
-        paint: {
-            'circle-radius': 10,
-            'circle-color': '#007cbf'
-        }
-    };
 
     return (
         <div id="footer">
@@ -51,11 +30,7 @@ const Footer = () => {
                         </Col>
                         <Col xs={12} sm={12} md={4} className="mb-4">
                             <h3 className="mb-4" style={{ textTransform: 'uppercase' }}>Our Location</h3>
-                            <ReactMapGL {...viewport} mapStyle="mapbox://styles/mapbox/dark-v9" mapboxApiAccessToken={MAPBOX_TOKEN} width="100%" height="250px" onViewportChange={setViewport}>
-                                <Source id="my-data" type="geojson" data={geojson}>
-                                    <Layer {...layerStyle} />
-                                </Source>
-                            </ReactMapGL>
+
 
                         </Col>
                         <Col xs={12} sm={12} md={4} className="mb-4">

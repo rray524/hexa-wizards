@@ -32,7 +32,7 @@ const AddMember = () => {
         formData.append('skills', skills);
         formData.append('image', image);
 
-        fetch('http://localhost:5000/members', {
+        fetch('https://afternoon-harbor-51520.herokuapp.com/members', {
             method: 'POST',
             body: formData
         })

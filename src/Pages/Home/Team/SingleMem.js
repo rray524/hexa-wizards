@@ -20,7 +20,7 @@ const SingleMem = () => {
     const [isLoading, setIsLoading] = useState(false);
     useEffect(() => {
         setIsLoading(true);
-        const url = `http://localhost:5000/members/${memID}`;
+        const url = `https://afternoon-harbor-51520.herokuapp.com/members/${memID}`;
         fetch(url)
             .then(res => res.json())
             .then(data => {

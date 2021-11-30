@@ -84,3 +84,20 @@ button.banner-btn {
 nav.navbar.navbar-expand-lg.navbar-light{
     z-index: 1!important;
 }
+@media only screen and (min-width: 320px) and (max-width: 991px) {
+    div#responsive-navbar-nav {
+      background: #0a0653!important;
+  }
+  a.navbar-brand {
+    width: 61%;
+}
+  div#responsive-navbar-nav a.nav-link {
+      color: #fff!important;
+      font-size: 15px!important;
+  }
+  a.talk.nav-link {
+    width: 127px;
+    height: 45px;
+}
+    
+  }

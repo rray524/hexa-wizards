@@ -1,0 +1,46 @@
+div#service {
+    background: #f8f8fe;
+    padding: 110px 0 80px;
+}
+#service p {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 26px;
+    color: #666;
+}
+#service h3 {
+    color: #151b2c;
+    margin-top: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 22px;
+    line-height: 30px;
+}
+.service_box_odd {
+    padding: 36px 30px!important;
+    border: 1px solid #fff!important;
+    position: relative!important;
+    min-height: 300px!important;
+    margin-bottom: 25px!important;
+}
+.service_box_even{
+    padding: 36px 30px!important;
+    border: 1px solid #fff!important;
+    min-height: 300px!important;
+    margin-bottom: 25px!important;
+    box-shadow: 0 5px 25px rgb(0 0 0 / 10%)!important;
+    background: #fff!important;
+    transition: 0.5s!important;
+}
+.service_box_odd:hover{
+    box-shadow: 0 5px 25px rgb(0 0 0 / 10%)!important;
+    background: #fff!important;
+    transition: 0.5s!important;
+}
+#service h2 {
+    font-size: 38px;
+    line-height: 46px;
+    color: #151b2c;
+    font-weight: 600;
+    margin-bottom: 55px;
+}

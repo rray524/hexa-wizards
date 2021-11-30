@@ -1,0 +1,34 @@
+div#form img {
+    width: 90%;
+}
+div#form {
+    background: #0A0653;
+    padding: 50px 0 0px;
+}
+.form_left input,.form_left input:focus {
+    height: 54px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 3px;
+    color: #fff;
+    background: transparent;
+    box-shadow: none;
+}
+.form_right textarea,.form_right textarea:focus {
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 3px;
+    color: #fff;
+    background: transparent;
+    box-shadow: none;
+}
+form#lead_form {
+    padding: 0 7%;
+}
+#form h2 {
+    font-size: 40px;
+    line-height: 46px;
+    font-weight: 600;
+}
+.lead_submit{
+    width: 100%!important;
+}

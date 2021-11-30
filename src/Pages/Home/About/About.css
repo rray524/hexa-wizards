@@ -1,0 +1,101 @@
+#about ul {
+    margin: 0px;
+    padding: 0px;
+}
+#about li{
+    display: block;
+    position: relative;
+    color: #f9f9f9;
+    padding: 12px 0px 12px 0px;
+}
+
+svg.fa-check {
+    margin-right: 6px;
+    font-size: 18px;
+    border-radius: 2px;
+    line-height: 30px;
+    color: #E21B1B;
+    background: #fff;
+}
+div#about {
+    background: #2a354e;
+    padding: 100px 0 30px;
+}
+#about img {
+    width: 90%;
+    border-radius: 4px;
+}
+.about-img {
+    position: relative;
+}
+span.ex-year {
+    font-size: 100px;
+    line-height: 90px;
+    color: #fff;
+    display: block;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.experience-year {
+    position: absolute;
+    bottom: 0;
+    background: #E21B1B;
+    border-radius: 4px;
+    padding: 30px 36px;
+    text-align: center;
+    margin: 0 23px 0;
+}
+span.year-ex {
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+}
+#about h2 {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 700;
+}
+#about p {
+    font-size: 16px;
+    font-weight: normal;
+    color: #f9f9f9;
+    line-height: 26px;
+    text-align: left;
+    margin: 0 0px 15px;
+}
+.statistics img {
+    width: 120px!important;
+    margin-right: 29px;
+}
+span.figure {
+    font-size: 42px;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 5px;
+    display: block;
+}
+span.figure-text {
+    color: #f9f9f9;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    display: block;
+}
+.countries {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.projects {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.statistics {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px 0;
+    flex-wrap: wrap;
+}

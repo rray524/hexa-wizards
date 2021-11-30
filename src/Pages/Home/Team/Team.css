@@ -1,0 +1,116 @@
+#team h2 {
+    color: #18233A;
+    font-size: 46px;
+    line-height: 54px;
+    font-weight: 600;
+}
+#team p.sub-header {
+    font-size: 17px;
+    font-weight: normal;
+    line-height: 26px;
+    color: #666;
+    margin: 41px 0;
+    padding: 0 31%;
+}
+.single-member {
+    box-shadow: 0 5px 25px rgb(0 0 0 / 10%);
+    padding: 30px 30px;
+    background: #fff;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.single-member .team-img {
+    display: inline-block;
+    margin-right: 30px;
+    transition: all 0.5s ease 0s;
+}
+.team-img img {
+    border: 1px solid #E21B1B;
+    border-radius: 5px;
+}
+.team-hover li {
+    display: inline-block;
+    margin-right: 3px;
+}
+.team-hover li a {
+    display: block;
+    line-height: 28px;
+    font-size: 14px;
+    color: #E21B1B;
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    background: #f1d4d4;
+    text-align: center;
+    transition: all 0.5s ease 0s;
+}
+.team-hover li a:hover {
+    background: #E21B1B;
+    transition: all 0.5s ease 0s;
+    color: #fff;
+}
+.team-content h4 a {
+    text-decoration: none;
+    color: #151b2c;
+}
+.team-content h4 a:hover{
+    color: #E21B1B;
+}
+.team-hover {
+    margin-top: 15px;
+    padding-left: 0;
+}
+div#team {
+    padding: 80px 0 50px;
+}
+.single-member-img .team-img img {
+    width: 100%;
+    height: auto;
+}
+.team-wrapper-area {
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+.single-team-content .team-profe {
+    text-transform: uppercase;
+    color: #E21B1B;
+    font-size: 15px;
+    margin-bottom: 10px;
+    display: block;
+}
+.team-wrapper-area h2 {
+    font-size: 37px;
+    line-height: 40px;
+    font-weight: 700;
+}
+.team-wrapper-area p {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 34px;
+    color: #666;
+}
+.single-expert {
+    text-align: center;
+    padding: 30px;
+    border: 1px solid #999;
+    border-radius: 3px;
+}
+.team-information ul li {
+    color: #647589;
+    list-style: none;
+    font-size: 21px;
+}
+.team-information ul {
+    padding: 0;
+}
+.row.team-single-wraper.align-items-center {
+    margin-top: 20px;
+}
+.expert-icon {
+    font-size: 44px;
+    margin-bottom: 5px;
+    display: block;
+    color: #E21B1B;
+}

@@ -1,0 +1,43 @@
+.nav-pills .nav-item:hover {
+    cursor: pointer;
+}
+.nav-pills .nav-link.active {
+    background-color: #E21B1B;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-pills .nav-link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#addService input, #addService textarea,#addService button {
+    border-radius: 0;
+}
+#addService button.btn.btn-primary {
+    background: #E21B1B;
+    color: #ffffff!important;
+    border-radius: 2px;
+    width: 163px;
+    height: 58px;
+    border: none;
+    font-size: 19px;
+    margin-right: 30px;
+    font-weight: 700;
+}
+.nav-pills .nav-link {
+    padding: 17px 19px;
+}
+#addService label.form-label {
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(10 6 83 / 80%);
+}
+.dashboard .tab-press {
+    color: #2a354e;
+    background: #eee;
+    border-radius: 0;
+}

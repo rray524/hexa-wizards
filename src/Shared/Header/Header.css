@@ -1,5 +1,6 @@
 .banner-img img {
     width: 100%;
+    border-radius: 5px;
 }
 .navbar a.nav-link {
     color: #2a354e!important;
@@ -50,12 +51,15 @@ svg.svg-inline--fa.fa-play-circle.fa-w-16 {
     color: #E21B1B;
     font-size: 37px;
 }
-.tube a {
+.tube span {
     text-decoration: none;
     color: #333;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.tube:hover {
+    cursor: pointer;
 }
 .banner-btn-youtube {
     display: flex;
@@ -76,4 +80,7 @@ button.banner-btn {
     font-size: 22px;
     font-weight: 600;
     margin-left: 8px;
+}
+nav.navbar.navbar-expand-lg.navbar-light{
+    z-index: 1!important;
 }

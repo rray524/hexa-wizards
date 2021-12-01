@@ -70,6 +70,7 @@ const SingleMem = () => {
                             </div>
                         </div>
 
+
                         <div className="row team-single-wraper align-items-center">
                             <div className="col-xl-3 col-lg-3 col-md-12">
                                 <div className="team-inner">
@@ -88,6 +89,7 @@ const SingleMem = () => {
                                 </div>
                             </div>
                         </div>
+
                     </div>}
                     {isLoading && <div className="spinner text-center" style={{ position: 'fixed', zIndex: '1', top: '0', left: '0', right: '0', bottom: '0' }}>
                         <Spinner animation="grow" variant="primary" />

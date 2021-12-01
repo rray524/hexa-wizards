@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Alert, Form, Button, Spinner } from 'react-bootstrap';
+import React, { useEffect, useState } from 'react';
+import { Alert, Form, Button, Spinner, Row, Col } from 'react-bootstrap';
 
 const AddMember = () => {
     const [name, setName] = useState('');
@@ -13,6 +13,13 @@ const AddMember = () => {
     const [image, setImage] = useState(null);
     const [success, setSuccess] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
+    const [members, setMembers] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/members')
+            .then(res => res.json())
+            .then(data => setMembers(data))
+    }, [])
 
     const handleSubmit = e => {
         setIsLoading(true);
@@ -52,6 +59,22 @@ const AddMember = () => {
     }
     const handleClose = () => {
         window.location.reload();
+    }
+    const handleDelete = id => {
+        const confirmation = window.confirm('Do you want Delete this Member?')
+        if (confirmation) {
+            const url = `http://localhost:5000/members/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount === 1) {
+                        const rest = members.filter(order => order._id !== id);
+                        setMembers(rest);
+                    }
+                })
+        }
     }
 
     return (
@@ -134,6 +157,26 @@ const AddMember = () => {
             {isLoading && <div className="spinner text-center" style={{ position: 'fixed', zIndex: '1', top: '0', left: '0', right: '0', bottom: '0' }}>
                 <Spinner animation="grow" variant="primary" />
             </div>}
+            <h2 className="text-center">Team Members List</h2>
+            <div className="member-list">
+
+                <Row>
+                    {
+                        members.map(member => <Col sm={4} md={4} className="memberCon" key={member._id}>
+                            <div className="member_name">
+                                <h4>Member Name:</h4>
+                                <h5>{member.name}</h5>
+                            </div>
+                            <div className="delete_option">
+                                <h4>Action:</h4>
+                                <h5 onClick={() => handleDelete(member._id)} className="text-center">X</h5>
+                            </div>
+                        </Col>)
+                    }
+                </Row>
+
+            </div>
+            <br /><br />
         </div>
     );
 };

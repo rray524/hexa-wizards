@@ -21,7 +21,7 @@ const Team = () => {
                     <h2 className="text-center">Team Members</h2>
                     <p className="text-center sub-header">We help agencies to define their new business objectives and then create the road map</p>
                     {
-                        members.map(member => <Col xs={12} sm={12} md={6} key="member._id">
+                        members.map((member, idx) => <Col xs={12} sm={12} md={6} key={idx}>
                             <div className="single-member">
                                 <div className="team-img">
                                     <img style={{ width: '200px', height: '220px' }} src={`data:image/png;base64,${member.image}`} alt="" />

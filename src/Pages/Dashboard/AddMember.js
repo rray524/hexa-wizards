@@ -162,7 +162,7 @@ const AddMember = () => {
 
                 <Row>
                     {
-                        members.map(member => <Col sm={4} md={4} className="memberCon" key={member._id}>
+                        members.map((member, idx) => <Col sm={4} md={4} className="memberCon" key={idx}>
                             <div className="member_name">
                                 <h4>Member Name:</h4>
                                 <h5>{member.name}</h5>

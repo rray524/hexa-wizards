@@ -12,7 +12,7 @@ const AddService = () => {
     const [loading, setLoading] = useState(false)
     useEffect(() => {
         setIsLoading(true);
-        fetch('http://localhost:5000/services')
+        fetch('https://afternoon-harbor-51520.herokuapp.com/services')
             .then(res => res.json())
             .then(data => {
                 setServices(data);
@@ -22,7 +22,7 @@ const AddService = () => {
     const handleDelete = id => {
         const confirmation = window.confirm('Do you want Delete this Service?')
         if (confirmation) {
-            const url = `http://localhost:5000/services/${id}`;
+            const url = `https://afternoon-harbor-51520.herokuapp.com/services/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

@@ -109,5 +109,14 @@ button.navbar-toggler.collapsed:focus, button.navbar-toggler:focus {
 .footer_last p {
     text-align: center;
 }
+.single-member {
+    display: block!important;
+    text-align: center!important;
+}
+
+.single-member .team-img {
+    margin-right: 0!important;
+    margin-bottom: 15px!important;
+}
     
-  }
+}

@@ -95,9 +95,19 @@ nav.navbar.navbar-expand-lg.navbar-light{
       color: #fff!important;
       font-size: 15px!important;
   }
+  button.navbar-toggler.collapsed,button.navbar-toggler {
+    background: #E21B1B;
+    border-radius: 0;
+}
+button.navbar-toggler.collapsed:focus, button.navbar-toggler:focus {
+    box-shadow: none;
+}
   a.talk.nav-link {
     width: 127px;
     height: 45px;
+}
+.footer_last p {
+    text-align: center;
 }
     
   }

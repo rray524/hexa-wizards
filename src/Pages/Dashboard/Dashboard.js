@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Container, Nav, Row, Tab } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase, faCoffee } from '@fortawesome/free-solid-svg-icons';
 import './Dashboard.css';
 import CommonHeader from '../../Shared/Header/CommonHeader';
 import dashboard from '../../images/Dashboard.png';
@@ -9,9 +9,13 @@ import AddService from './AddService';
 import AddMember from './AddMember';
 import LeadForm from '../Home/LeadForm/LeadForm';
 import Footer from '../../Shared/Footer/Footer';
+import Message from './Message';
+import { faCommentAlt, faUser } from '@fortawesome/free-regular-svg-icons';
 
 const Dashboard = () => {
-    const element = <FontAwesomeIcon icon={faCoffee} />
+    const element = <FontAwesomeIcon icon={faBriefcase} />
+    const users = <FontAwesomeIcon icon={faUser} />
+    const message = <FontAwesomeIcon icon={faCommentAlt} />
     return (
         <>
             <CommonHeader></CommonHeader>
@@ -28,7 +32,10 @@ const Dashboard = () => {
                                         <Nav.Link eventKey="first" className="tab-press">{element} Add Service Details</Nav.Link>
                                     </Nav.Item>
                                     <Nav.Item>
-                                        <Nav.Link eventKey="second" className="tab-press">{element} Add New Member</Nav.Link>
+                                        <Nav.Link eventKey="second" className="tab-press">{users} Add New Member</Nav.Link>
+                                    </Nav.Item>
+                                    <Nav.Item>
+                                        <Nav.Link eventKey="third" className="tab-press">{message} Messages</Nav.Link>
                                     </Nav.Item>
                                 </Nav>
                             </Col>
@@ -40,13 +47,16 @@ const Dashboard = () => {
                                     <Tab.Pane eventKey="second">
                                         <AddMember></AddMember>
                                     </Tab.Pane>
+                                    <Tab.Pane eventKey="third">
+                                        <Message></Message>
+                                    </Tab.Pane>
                                 </Tab.Content>
                             </Col>
                         </Row>
                     </Tab.Container>
                 </Container>
             </div>
-            <LeadForm></LeadForm>
+
             <Footer></Footer>
         </>
     );

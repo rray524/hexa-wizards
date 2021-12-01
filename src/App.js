@@ -9,6 +9,7 @@ import ScrollToTop from './Shared/ScrollToTop';
 
 function App() {
   const [showButton, setShowButton] = useState(false);
+  const [scroll, setScroll] = useState(0);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -27,8 +28,29 @@ function App() {
       behavior: 'smooth' // for smoothly scrolling
     });
   };
+
+  // progress bar
+  useEffect(() => {
+
+    let progressBarHandler = () => {
+
+      const totalScroll = document.documentElement.scrollTop;
+      const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scroll = `${totalScroll / windowHeight}`;
+
+      setScroll(scroll);
+    }
+
+    window.addEventListener("scroll", progressBarHandler);
+
+    return () => window.removeEventListener("scroll", progressBarHandler);
+  });
+
   return (
     <div className="App">
+      <div id="progressBarContainer">
+        <div id="progressBar" style={{ transform: `scale(${scroll}, 1)`, opacity: `${scroll}` }} />
+      </div>
       <BrowserRouter>
         <ScrollToTop>
           <Switch>

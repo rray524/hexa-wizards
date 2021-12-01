@@ -57,3 +57,7 @@ button#sus_submit {
 input#sus_email {
     border-radius: 0;
 }
+#footer a {
+    color: #666;
+    text-decoration: none;
+}

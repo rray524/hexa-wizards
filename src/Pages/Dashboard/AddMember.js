@@ -14,12 +14,13 @@ const AddMember = () => {
     const [success, setSuccess] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [members, setMembers] = useState([]);
+    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
         fetch('https://afternoon-harbor-51520.herokuapp.com/members')
             .then(res => res.json())
             .then(data => setMembers(data))
-    }, [])
+    }, [loading])
 
     const handleSubmit = e => {
         setIsLoading(true);
@@ -48,6 +49,7 @@ const AddMember = () => {
                 console.log('Success:', result);
                 if (result.insertedId) {
                     setSuccess(true);
+                    setLoading(true);
 
                 }
             })
@@ -162,7 +164,7 @@ const AddMember = () => {
 
                 <Row>
                     {
-                        members.map((member, idx) => <Col sm={4} md={4} className="memberCon" key={idx}>
+                        members.map((member, idx) => <Col xs={12} sm={12} md={6} className="memberCon" key={idx}>
                             <div className="member_name">
                                 <h4>Member Name:</h4>
                                 <h5>{member.name}</h5>

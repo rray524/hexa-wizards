@@ -35,9 +35,9 @@ const Footer = () => {
                         </Col>
                         <Col xs={12} sm={12} md={4} className="mb-4">
                             <h3 className="mb-4" style={{ textTransform: 'uppercase' }}>Information</h3>
-                            <p><strong>Location :</strong> House-32, Zonson street-3/5, London, UK</p>
-                            <p><strong>Tel :</strong> +0890-564-5644</p>
-                            <p><strong>Email :</strong> info@domain.com</p>
+                            <p><strong>Location :</strong> 1230 NE 3RD TER , Postal Code 33030,Homestead,Florida,USA</p>
+                            <p><strong>Tel :</strong><a href="tel:+17866605845"> +1 (786) 660-5845</a></p>
+                            <p><strong>Email :</strong><a href="mailto:hexawizards2go@gmail.com"> hexawizards2go@gmail.com</a></p>
                             <div className="suscribe_input">
                                 <input type="email" className="email form-control width-80" id="sus_email" placeholder="Type Email" />
                                 <button type="submit" id="sus_submit" className="banner-btn add-btn">Subscribe</button>

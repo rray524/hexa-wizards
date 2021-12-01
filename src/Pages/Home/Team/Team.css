@@ -19,7 +19,6 @@
     margin-bottom: 30px;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
 }
 .single-member .team-img {
     display: inline-block;

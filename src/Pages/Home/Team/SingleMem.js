@@ -17,6 +17,7 @@ const SingleMem = () => {
     const phn = <FontAwesomeIcon icon={faPhone} />
     const { memID } = useParams();
     const [member, setMember] = useState([]);
+
     const [isLoading, setIsLoading] = useState(false);
     useEffect(() => {
         setIsLoading(true);
@@ -30,6 +31,7 @@ const SingleMem = () => {
             })
     }, [])
     return (
+
         <div id="single-mem">
             <CommonHeader></CommonHeader>
             <div className="header-breadcrumb" style={{ backgroundImage: `url(${dashboard})`, backgroundSize: 'cover', padding: '200px 0', boxShadow: 'inset 0 0 0 2000px rgba(10,6,83,0.8)' }}>

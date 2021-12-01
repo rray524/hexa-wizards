@@ -18,7 +18,7 @@ const LeadForm = () => {
         formData.append('subject', subject);
         formData.append('message', message);
 
-        fetch('http://localhost:5000/messages', {
+        fetch('https://afternoon-harbor-51520.herokuapp.com/messages', {
             method: 'POST',
             body: formData
         })

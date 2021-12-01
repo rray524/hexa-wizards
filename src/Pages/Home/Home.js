@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
 import About from './About/About';
@@ -8,6 +8,7 @@ import Sponsor from './Sponsor/Sponsor';
 import Team from './Team/Team';
 
 const Home = () => {
+
     return (
         <div id="home-container">
             <Header></Header>

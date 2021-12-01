@@ -63,7 +63,7 @@ const AddMember = () => {
     const handleDelete = id => {
         const confirmation = window.confirm('Do you want Delete this Member?')
         if (confirmation) {
-            const url = `http://localhost:5000/members/${id}`;
+            const url = `https://afternoon-harbor-51520.herokuapp.com/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

@@ -14,7 +14,7 @@ import useAuth from '../../hooks/useAuth';
 
 const Header = () => {
 
-    const { user, logout } = useAuth();
+    const { user, logout, admin } = useAuth();
     const talk = <FontAwesomeIcon icon={faCommentAlt} />;
 
     const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -56,7 +56,7 @@ const Header = () => {
                             <Nav className="me-auto">
                                 <Nav.Link as={Link} to="/">Home</Nav.Link>
                                 {/* <Nav.Link as={Link} to="/contact">Contact</Nav.Link> */}
-                                <Nav.Link as={Link} to="/dashboard">Dashboard</Nav.Link>
+                                {admin && <Nav.Link as={Link} to="/dashboard">Dashboard</Nav.Link>}
                                 {
                                     user.email ? <Nav.Link as={Link} to='#' onClick={logout}>Logout</Nav.Link> :
                                         <Nav.Link as={Link} to="/login">Login</Nav.Link>

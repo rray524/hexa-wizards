@@ -63,3 +63,15 @@
     background: #E21B1B;
     color: white;
 }
+.make-admin {
+    margin: 50px 0 100px;
+}
+.make-admin label {
+    font-size: 23px;
+    margin-right: 33px;
+}
+.make-admin input[type="email"] {
+    border: 1px solid;
+    padding: 13px 8px;
+    width: 41%;
+}

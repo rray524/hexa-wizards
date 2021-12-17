@@ -8,7 +8,7 @@ import ScrollToTop from './Shared/ScrollToTop';
 import Login from './Pages/Access/Login';
 import Registration from './Pages/Access/Registration';
 import AuthProvider from './context/AuthProvider';
-import PrivateRoute from './Pages/Access/PrivateRoute/PrivateRoute';
+import AdminRoute from './Pages/Access/AdminRoute/AdminRoute';
 
 
 function App() {
@@ -47,9 +47,9 @@ function App() {
                 <Home></Home>
               </Route>
 
-              <PrivateRoute path="/dashboard">
+              <AdminRoute path="/dashboard">
                 <Dashboard></Dashboard>
-              </PrivateRoute>
+              </AdminRoute>
               <Route path="/members/:memID">
                 <SingleMem></SingleMem>
               </Route>

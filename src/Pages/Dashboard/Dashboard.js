@@ -9,12 +9,14 @@ import AddService from './AddService';
 import AddMember from './AddMember';
 import Footer from '../../Shared/Footer/Footer';
 import Message from './Message';
-import { faCommentAlt, faUser } from '@fortawesome/free-regular-svg-icons';
+import { faCommentAlt, faUser, faUserCircle } from '@fortawesome/free-regular-svg-icons';
+import MakeAdmin from './MakeAdmin';
 
 const Dashboard = () => {
     const element = <FontAwesomeIcon icon={faBriefcase} />
     const users = <FontAwesomeIcon icon={faUser} />
     const message = <FontAwesomeIcon icon={faCommentAlt} />
+    const admin = <FontAwesomeIcon icon={faUserCircle} />
     return (
         <>
             <CommonHeader></CommonHeader>
@@ -36,6 +38,9 @@ const Dashboard = () => {
                                     <Nav.Item>
                                         <Nav.Link eventKey="third" className="tab-press">{message} Messages</Nav.Link>
                                     </Nav.Item>
+                                    <Nav.Item>
+                                        <Nav.Link eventKey="fourth" className="tab-press">{admin} Make Admin</Nav.Link>
+                                    </Nav.Item>
                                 </Nav>
                             </Col>
                             <Col sm={9}>
@@ -48,6 +53,9 @@ const Dashboard = () => {
                                     </Tab.Pane>
                                     <Tab.Pane eventKey="third">
                                         <Message></Message>
+                                    </Tab.Pane>
+                                    <Tab.Pane eventKey="fourth">
+                                        <MakeAdmin></MakeAdmin>
                                     </Tab.Pane>
                                 </Tab.Content>
                             </Col>

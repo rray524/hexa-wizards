@@ -1,10 +1,14 @@
 import './App.css';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import { useEffect, useState } from 'react';
 import SingleMem from './Pages/Home/Team/SingleMem';
 import ScrollToTop from './Shared/ScrollToTop';
+import Login from './Pages/Access/Login';
+import Registration from './Pages/Access/Registration';
+import AuthProvider from './context/AuthProvider';
+import PrivateRoute from './Pages/Access/PrivateRoute/PrivateRoute';
 
 
 function App() {
@@ -32,25 +36,34 @@ function App() {
 
   return (
     <div className="App">
+      <AuthProvider>
+        <BrowserRouter>
+          <ScrollToTop>
+            <Switch>
+              <Route exact path="/">
+                <Home></Home>
+              </Route>
+              <Route path="/home">
+                <Home></Home>
+              </Route>
 
-      <BrowserRouter>
-        <ScrollToTop>
-          <Switch>
-            <Route exact path="/">
-              <Home></Home>
-            </Route>
-            <Route path="/home">
-              <Home></Home>
-            </Route>
-            <Route path="/dashboard">
-              <Dashboard></Dashboard>
-            </Route>
-            <Route path="/members/:memID">
-              <SingleMem></SingleMem>
-            </Route>
-          </Switch>
-        </ScrollToTop>
-      </BrowserRouter>
+              <PrivateRoute path="/dashboard">
+                <Dashboard></Dashboard>
+              </PrivateRoute>
+              <Route path="/members/:memID">
+                <SingleMem></SingleMem>
+              </Route>
+              <Route path="/login">
+                <Login></Login>
+              </Route>
+              <Route path="/registration">
+                <Registration></Registration>
+              </Route>
+
+            </Switch>
+          </ScrollToTop>
+        </BrowserRouter>
+      </AuthProvider>
       {showButton && (
         <button onClick={scrollToTop} className="back-to-top">
           &#8679;

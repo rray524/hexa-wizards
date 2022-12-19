@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Col, Container, Row, Button, Modal } from 'react-bootstrap';
-import banner from '../images/banner.jpg';
+import banner from '../images/banner-bg.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 function MyVerticallyCenteredModal(props) {

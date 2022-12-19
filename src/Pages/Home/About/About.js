@@ -2,7 +2,7 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import aboutImg from '../../../images/about.jpg';
+import aboutImg from '../../../images/best-about-us-pages';
 import './About.css';
 import ab1 from '../../../images/ab-icon2.png';
 import ab2 from '../../../images/ab-icon.png';

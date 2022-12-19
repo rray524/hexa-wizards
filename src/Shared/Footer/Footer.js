@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Nav, Row } from 'react-bootstrap';
 import './Footer.css';
 import logo from '../../images/logo.png';
 import footerBg from '../../images/bg2.jpg';
 import { faFacebookF, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 
 
 const Footer = () => {
@@ -21,7 +22,7 @@ const Footer = () => {
                     <Row>
                         <Col xs={12} sm={12} md={4} className="mb-4">
                             <img src={logo} alt="" />
-                            <p>When replacing a selection. help agencies to define their new business objectives and then create. maintains the amount of lines. When replacing a selection. help agencies to define their</p>
+                            <p>Hexa wizards is a full stack web application, logo design, video editing & Data entry service provider agency. It provide super fast and secure services in an affordable Price.</p>
                             <div className="social-icons">
                                 <a href="https://www.facebook.com/">{fb}</a>
                                 <a href="https://www.facebook.com/">{tw}</a>
@@ -29,13 +30,13 @@ const Footer = () => {
                             </div>
                         </Col>
                         <Col xs={12} sm={12} md={4} className="mb-4">
-                            <h3 className="mb-4" style={{ textTransform: 'uppercase' }}>Our Location</h3>
-
+                            <h3 className="mb-4" style={{ textTransform: 'uppercase' }}>Important Links</h3>
+                            <Nav.Link as={Link} to="/privacy">Privacy Policy</Nav.Link>
 
                         </Col>
                         <Col xs={12} sm={12} md={4} className="mb-4">
                             <h3 className="mb-4" style={{ textTransform: 'uppercase' }}>Information</h3>
-                            <p><strong>Location :</strong> 1230 NE 3RD TER , Postal Code 33030,Homestead,Florida,USA</p>
+                            <p><strong>Location :</strong> 1230 NE 3RD TER , Postal Code 33030, Homestead, Florida, USA</p>
                             <p><strong>Tel :</strong><a href="tel:+17866605845"> +1 (786) 660-5845</a></p>
                             <p><strong>Email :</strong><a href="mailto:hexawizards2go@gmail.com"> hexawizards2go@gmail.com</a></p>
                             <div className="suscribe_input">

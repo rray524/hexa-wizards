@@ -12,7 +12,7 @@ const AddService = () => {
     const [loading, setLoading] = useState(false)
     useEffect(() => {
         setIsLoading(true);
-        fetch('https://afternoon-harbor-51520.herokuapp.com/services')
+        fetch('https://drab-gray-firefly-garb.cyclic.app/services')
             .then(res => res.json())
             .then(data => {
                 setServices(data);
@@ -22,7 +22,7 @@ const AddService = () => {
     const handleDelete = id => {
         const confirmation = window.confirm('Do you want Delete this Service?')
         if (confirmation) {
-            const url = `https://afternoon-harbor-51520.herokuapp.com/services/${id}`;
+            const url = `https://drab-gray-firefly-garb.cyclic.app/services/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -46,7 +46,7 @@ const AddService = () => {
         formData.append('service', service);
         formData.append('image', image);
 
-        fetch('https://afternoon-harbor-51520.herokuapp.com/services', {
+        fetch('https://drab-gray-firefly-garb.cyclic.app/services', {
             method: 'POST',
             body: formData
         })

@@ -13,7 +13,7 @@ const MakeAdmin = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const user = { email }
-        fetch('https://afternoon-harbor-51520.herokuapp.com/users/admin', {
+        fetch('https://drab-gray-firefly-garb.cyclic.app/users/admin', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

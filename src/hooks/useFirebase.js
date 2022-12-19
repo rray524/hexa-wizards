@@ -1,11 +1,33 @@
 import { useState, useEffect } from 'react';
 import initFirebase from '../Pages/Access/Firebase/firebase.init';
 import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signOut, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { Modal, Button } from 'react-bootstrap';
+
+function MyVerticallyCenteredModal(props) {
+    return (
+        <Modal
+            {...props}
+            size="lg"
+            aria-labelledby="contained-modal-title-vcenter"
+            centered
+        >
+            <Modal.Header closeButton>
+                <Modal.Title id="contained-modal-title-vcenter">
+                    Modal heading
+                </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <h4>Congratulations! You have been logged in successfully! </h4>
+            </Modal.Body>
+        </Modal>
+    );
+}
 
 //initial Firebase
 initFirebase();
 const useFirebase = () => {
     const [user, setUser] = useState({});
+    const [modalShow, setModalShow] = useState(false);
     const [error, setError] = useState('');
     const auth = getAuth();
     const [isLoading, setIsLoading] = useState(true);
@@ -82,7 +104,7 @@ const useFirebase = () => {
     // save user to mongo
     const saveUser = (email, displayName) => {
         const user = { email, displayName }
-        fetch('https://afternoon-harbor-51520.herokuapp.com/users', {
+        fetch('https://drab-gray-firefly-garb.cyclic.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -92,7 +114,7 @@ const useFirebase = () => {
             .then(res => res.json())
     }
     useEffect(() => {
-        fetch(`https://afternoon-harbor-51520.herokuapp.com/users/${user.email}`)
+        fetch(`https://drab-gray-firefly-garb.cyclic.app/users/${user.email}`)
             .then(res => res.json())
             .then(data => {
                 setAdmin(data.admin)

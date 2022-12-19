@@ -17,7 +17,7 @@ const AddMember = () => {
     const [loading, setLoading] = useState(false)
 
     useEffect(() => {
-        fetch('https://afternoon-harbor-51520.herokuapp.com/members')
+        fetch('https://drab-gray-firefly-garb.cyclic.app/members')
             .then(res => res.json())
             .then(data => setMembers(data))
     }, [loading])
@@ -40,7 +40,7 @@ const AddMember = () => {
         formData.append('skills', skills);
         formData.append('image', image);
 
-        fetch('https://afternoon-harbor-51520.herokuapp.com/members', {
+        fetch('https://drab-gray-firefly-garb.cyclic.app/members', {
             method: 'POST',
             body: formData
         })
@@ -65,7 +65,7 @@ const AddMember = () => {
     const handleDelete = id => {
         const confirmation = window.confirm('Do you want Delete this Member?')
         if (confirmation) {
-            const url = `https://afternoon-harbor-51520.herokuapp.com/members/${id}`;
+            const url = `https://drab-gray-firefly-garb.cyclic.app/members/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

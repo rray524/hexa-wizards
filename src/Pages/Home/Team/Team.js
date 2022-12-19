@@ -9,7 +9,7 @@ const Team = () => {
     const lnkdin = <FontAwesomeIcon icon={faLinkedinIn} />
     const [members, setMembers] = useState([]);
     useEffect(() => {
-        fetch('https://afternoon-harbor-51520.herokuapp.com/members')
+        fetch('https://drab-gray-firefly-garb.cyclic.app/members')
             .then(res => res.json())
             .then(data => setMembers(data))
 

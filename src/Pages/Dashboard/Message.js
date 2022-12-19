@@ -4,7 +4,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 const Message = () => {
     const [messages, setMessages] = useState([]);
     useEffect(() => {
-        fetch('https://afternoon-harbor-51520.herokuapp.com/messages')
+        fetch('https://drab-gray-firefly-garb.cyclic.app/messages')
             .then(res => res.json())
             .then(data => setMessages(data))
     }, [])

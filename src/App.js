@@ -9,6 +9,7 @@ import Login from './Pages/Access/Login';
 import Registration from './Pages/Access/Registration';
 import AuthProvider from './context/AuthProvider';
 import AdminRoute from './Pages/Access/AdminRoute/AdminRoute';
+import Privacy from './Pages/Privacy/Privacy';
 
 
 function App() {
@@ -46,7 +47,9 @@ function App() {
               <Route path="/home">
                 <Home></Home>
               </Route>
-
+              <Route path="/privacy">
+                <Privacy></Privacy>
+              </Route>
               <AdminRoute path="/dashboard">
                 <Dashboard></Dashboard>
               </AdminRoute>

@@ -121,5 +121,8 @@ button.navbar-toggler.collapsed:focus, button.navbar-toggler:focus {
     margin-right: 0!important;
     margin-bottom: 15px!important;
 }
+img.site-sponsor.graphic {
+    margin-top: 37%;
+}
     
 }

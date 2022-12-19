@@ -18,7 +18,7 @@ const LeadForm = () => {
         formData.append('subject', subject);
         formData.append('message', message);
 
-        fetch('https://afternoon-harbor-51520.herokuapp.com/messages', {
+        fetch('https://drab-gray-firefly-garb.cyclic.app/messages', {
             method: 'POST',
             body: formData
         })

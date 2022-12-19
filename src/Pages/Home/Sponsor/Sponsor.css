@@ -1,3 +1,11 @@
 img.site-sponsor {
     width: 100%;
 }
+div#sponsor {
+    padding: 45px 0;
+    text-align: center;
+    box-shadow: 0 5px 25px rgb(0 0 0 / 10%)!important;
+}
+img.site-sponsor.fiverr {
+    width: 72%;
+}

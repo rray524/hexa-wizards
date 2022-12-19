@@ -7,7 +7,7 @@ const Service = () => {
     const [isLoading, setIsLoading] = useState(false);
     useEffect(() => {
         setIsLoading(true);
-        fetch('https://afternoon-harbor-51520.herokuapp.com/services')
+        fetch('https://drab-gray-firefly-garb.cyclic.app/services')
             .then(res => res.json())
             .then(data => {
                 setServices(data);
